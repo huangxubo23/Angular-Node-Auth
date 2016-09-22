@@ -61,6 +61,14 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
         resolve: {
           loginRequired: loginRequired
         }
+      })
+      .state('password', {
+        url: '/profile/password',
+        templateUrl: 'partials/resetPassword.html',
+        controller: 'ProfileCtrl',
+        resolve: {
+          loginRequired: loginRequired
+        }
       });
     $urlRouterProvider.otherwise('/');
 
